@@ -326,9 +326,67 @@ The following tags optionally delimit elements inside the TEXT
 element. Not all stories will have these tags:
 
         a. <AUTHOR>, </AUTHOR> : Author of the story. 
-        b. <DATELINE>, </DATELINE> : Location the story
-originated from, and day of the year. 
-        c. <TITLE>, </TITLE> : Title of the story. We have attempted
-to capture the text of stories with TYPE="BRIEF" within a <TITLE>
-element.
+        b. <DATELINE>, </DATELINE> : Location the story originated from, and day of the year. 
+        c. <TITLE>, </TITLE> : Title of the story. We have attempted to capture the text of stories with TYPE="BRIEF" within a <TITLE> element.
         d. <BODY>, </BODY> : The main text of the story.
+
+# VII. Categories 
+
+   A test collection for text categorization contains, at minimum, a
+set of texts and, for each text, a specification of what categories
+that text belongs to.  For the Reuters-21578 collection the documents
+are Reuters newswire stories, and the categories are five different
+sets of content related categories.  For each document, a human
+indexer decided which categories from which sets that document
+belonged to.  The category sets are as follows:
+
+              Number of    Number of Categories   Number of Categories 
+Category Set  Categories     w/ 1+ Occurrences      w/ 20+ Occurrences  
+************  **********   ********************   ******************** 
+EXCHANGES        39                32                       7
+ORGS             56                32                       9
+PEOPLE          267               114                      15
+PLACES          175               147                      60
+TOPICS          135               120                      57
+
+
+The TOPICS categories are economic subject categories.  Examples
+include "coconut", "gold", "inventories", and "money-supply".  This
+set of categories is the one that has been used in almost all previous
+research with the Reuters data. HAYES90b discusses some examples of
+the policies (not always obvious) used by the human indexers in
+deciding whether a document belonged to a particular TOPIC category.
+
+The EXCHANGES, ORGS, PEOPLE, and PLACES categories correspond to named
+entities of the specified type.  Examples include "nasdaq"
+(EXCHANGES), "gatt" (ORGS), "perez-de-cuellar" (PEOPLE), and
+"australia" (PLACES). Typically a document assigned to a category from
+one of these sets explicitly includes some form of the category name
+in the document's text. (Something which is usually not true for
+TOPICS categories.)  However, not all documents containing a named
+entity corresponding to the category name are assigned to these
+category, since the entity was required to be a focus of the news
+story [HAYES90b]. Thus these proper name categories are not as simple
+to assign correctly as might be thought.
+
+Reuters-21578, Distribution 1.0 includes five files
+(all-exchanges-strings.lc.txt, all-orgs-strings.lc.txt,
+all-people-strings.lc.txt, all-places-strings.lc.txt, and
+all-topics-strings.lc.txt) which list the names of *all* legal
+categories in each set.  A sixth file, cat-descriptions_120396.txt
+gives some additional information on the category sets.
+
+Note that a sixth category field, COMPANIES, was present in the
+original Reuters materials distributed by Carnegie Group, but no
+company information was actually included in these fields. In the
+Reuters-21578 collection this field is always empty.
+
+In the table above we note how many categories appear in at least 1 of
+the 21,578 documents in the collection, and how many appear at least
+20 of the documents.  Many categories appear in no documents, but we
+encourage researchers to include these categories when evaluating the
+effectiveness of their categorization system. 
+
+Additional details of the documents, categories, and corpus
+preparation process appear in LEWIS92b, and at greater length in
+Section 8.1 of LEWIS91d.
