@@ -1,4 +1,3 @@
-
           Reuters-21578 text categorization test collection
                         Distribution 1.0
                        README file (v 1.2)
