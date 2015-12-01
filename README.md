@@ -7,14 +7,14 @@
                       AT&T Labs - Research     
                      lewis@research.att.com
 
-I. Introduction
+# I. Introduction
 
    This README describes Distribution 1.0 of the Reuters-21578 text
 categorization test collection, a resource for research in information
 retrieval, machine learning, and other corpus-based research.
 
 
-II. Copyright & Notification 
+# II. Copyright & Notification 
 
    The copyright for the text of newswire articles and Reuters
 annotations in the Reuters-21578 collection resides with Reuters Ltd.
@@ -26,7 +26,7 @@ Distribution 1.0", and inform your readers of the current location of
 the data set (see "Availability & Questions").
 
 
-III. Availability & Questions
+# III. Availability & Questions
 
    The Reuters-21578, Distribution 1.0 test collection is available
 from David D. Lewis' professional home page, currently:
@@ -47,7 +47,7 @@ issues. You may join the list by writing David Lewis at
 lewis@research.att.com.
 
 
-IV. History & Acknowledgements
+# IV. History & Acknowledgements
 
    The documents in the Reuters-21578 collection appeared on the
 Reuters newswire in 1987.  The documents were assembled and indexed
@@ -115,7 +115,7 @@ are collected 1000 to a file in order by ID (and therefore in order
 chronologically). 
 
 
-V. What is a Text Categorization Test Collection and Who Cares? 
+# V. What is a Text Categorization Test Collection and Who Cares? 
 
    *Text categorization* is the task of deciding whether a piece of
 text belongs to any of a set of prespecified categories.  It is a
@@ -151,7 +151,7 @@ distribution of stories within the timespan covered may make this
 collection a poor one to explore temporal issues.
 
 
-VI. Formatting 
+# VI. Formatting 
 
      The Reuters-21578 collection is distributed in 22 files. Each of
 the first 21 files (reut2-000.sgm through reut2-020.sgm) contain 1000
@@ -334,7 +334,7 @@ element.
         d. <BODY>, </BODY> : The main text of the story.
 
 
-VII. Categories 
+# VII. Categories 
 
    A test collection for text categorization contains, at minimum, a
 set of texts and, for each text, a specification of what categories
@@ -395,7 +395,7 @@ Additional details of the documents, categories, and corpus
 preparation process appear in LEWIS92b, and at greater length in
 Section 8.1 of LEWIS91d.
 
-VIII. Using Reuters-21578 for Text Categorization Research
+# VIII. Using Reuters-21578 for Text Categorization Research
 
      In testing a method for text categorization it is important that
 knowledge of the nature of the test data not unduly influence the
@@ -425,7 +425,7 @@ REUTERS tags.  We strongly encourage that all studies on Reuters-21578
 use one of the following training test divisions (or use multiple
 random splits, e.g. cross-validation):
 
-VIII.A. The Modified Lewis ("ModLewis") Split:
+#### VIII.A. The Modified Lewis ("ModLewis") Split:
 
  Training Set (13,625 docs): LEWISSPLIT="TRAIN";  TOPICS="YES" or "NO"
  Test Set (6,188 docs):  LEWISSPLIT="TEST"; TOPICS="YES" or "NO"
@@ -455,7 +455,7 @@ category labels, results on the ModLewis split cannot be compared
 with any published results on the Reuters-22173 collection!
 
 
-VIII.B. The Modified Apte ("ModApte") Split :
+#### VIII.B. The Modified Apte ("ModApte") Split :
 
  Training Set (9,603 docs): LEWISSPLIT="TRAIN";  TOPICS="YES"
  Test Set (3,299 docs): LEWISSPLIT="TEST"; TOPICS="YES"
@@ -506,7 +506,7 @@ category labels, results on the ModApte split cannot be compared
 with any published results on the Reuters-22173 collection!
 
 
-VIII.C. The Modified Hayes ("ModHayes") Split: 
+#### VIII.C. The Modified Hayes ("ModHayes") Split: 
  Training Set (20856 docs): CGISPLIT="TRAINING-SET"
  Test Set (722 docs): CGISPLIT="PUBLISHED-TESTSET"
  Unused (0 docs)
@@ -583,7 +583,7 @@ PLACE "ivory-coast": 18383
 somewhat nonstandard. See Ch. 8 of LEWIS91d for a discussion.
 
 
-VIII.D. Other Splits
+#### VIII.D. Other Splits
   
      We strongly encourage researchers to use one (or more) of the
 above splits for their experiments (or use cross-validation on one of
@@ -621,7 +621,7 @@ categories. This does not appear to be a safe assumption - we have
 found a number of examples of documents with PLACES but no TOPICS when
 there are TOPICS that clearly apply.
 
-IX. Feature Sets in Text Categorization 
+# IX. Feature Sets in Text Categorization 
 
    For many text categorization methods, particularly those using
 statistical classification techniques, it is convenient to represent
@@ -656,7 +656,7 @@ high quality set of features which other researchers interested only
 in learning algorithms could make use of.
 
 
-X. Bibliography
+# X. Bibliography
 
 [This needs to be updated.]
 
@@ -809,7 +809,3 @@ Research and Development in Information Retrieval"
  ,year = 1991
  ,address = "San Mateo, CA"
  }
-
-
-
-
